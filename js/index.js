@@ -469,7 +469,7 @@ function onLoad() {
         TSave = TSave + el.Amount;
       }
     }
-    console.log(Chargesdiv);
+    //console.log(Chargesdiv);
   });
   Chargesdiv = document.createElement("tr");
   Chargesdiv.classList = "trCharge";

@@ -1,14 +1,10 @@
 function generatePDF(){
     const element = document.getElementById("invoice");
-   
 
-   /* html2pdf()
-    .from(element)
-    .save();*/
-
+    //console.log(Invoicenumber);
     const opt = {
         margin:       0,
-        filename:     `${invoice}.pdf`,
+        filename:     `${Invoicenumber}.pdf`,
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2 },
         jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
