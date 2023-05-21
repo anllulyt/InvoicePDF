@@ -28,21 +28,52 @@ body {
     
 }
 #invoice{
- /*   visibility: hidden;*/
-    padding-right: 2rem;
+    
+    width: 49rem;
+    height: 68rem;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    padding-top: 2rem;
+    
+    
+
 }
+.main-index{
+    width: 50rem;
+    height: 69rem; 
+    padding: 0;
+  /*  margin: 0;*/
+    border: 1px solid rgba(12, 12, 12, 0.192);
+    -webkit-box-shadow: 11px 9px 11px -1px rgba(171,171,171,1);
+    -moz-box-shadow: 11px 9px 11px -1px rgba(171,171,171,1);
+    box-shadow: 11px 9px 11px -1px rgba(171,171,171,1);
+}
+
 #detail{
     visibility: hidden;
 }
 
 .menu-header{
     background-color: white;
-    height: 6rem;
+    height: 15rem;
+    text-align: center;
 }
 .menu-header-div{
     background-color: white;
-    margin: 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
 }
+
+.selectdiv{
+     margin-top: 5rem;
+     margin-bottom: 5rem;
+ }
+ 
 
  .Questions{
     font-weight: bold;   
@@ -69,6 +100,7 @@ body {
 
 h1{
     font-size: 1.2rem;
+   
     font-weight: bold;
     color: black;
     letter-spacing: 0.01rem;
@@ -78,10 +110,6 @@ h1 i{
     font-weight: bold;
 }
 
-.selectdiv{
-    margin-top: 8rem;
-    margin-bottom: 4rem;
-}
 
 h2{
     font-weight: bold;
@@ -297,6 +325,6 @@ h4{
 }
 
 
-.firstinfo{
+/*.firstinfo{
     margin-top: 1rem;
-}
+}*/
