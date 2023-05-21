@@ -257,7 +257,7 @@ function onLoad() {
       let eitem5Amount = 0;
       let eitem6 = "";
       let eitem6Amount = 0;
- 
+
       if (linea.trim().length > 1117) {
         eitem3 = linea.substring(1117, 1157);
         eitem3Amount = Number(
@@ -433,6 +433,7 @@ function onLoad() {
     // console.log(el);
 
     let index = Total.findIndex((i) => i.Name == el.Name);
+    //console.log(index)
     if (Total[index].Amount == 0) {
       Total[index].Amount = Total[index].Amount + el.Amount;
     } else {
@@ -468,8 +469,10 @@ function onLoad() {
         TSave = TSave + el.Amount;
       }
     }
+    console.log(Chargesdiv);
   });
-
+  Chargesdiv = document.createElement("tr");
+  Chargesdiv.classList = "trCharge";
   const content3 = `<td class="ChTotalNet"> <p class="chaTotalNet"> Net Transportation Charges </p> </td>
                     <td><p class="TotalNet" > ${addCommas(
                       Number(TotalNet).toFixed(2)
@@ -477,7 +480,6 @@ function onLoad() {
 
   Chargesdiv.innerHTML = content3;
   tbody1.append(Chargesdiv);
-
   let SubTotalNet = 0;
 
   Total.forEach((el) => {
@@ -490,7 +492,7 @@ function onLoad() {
       el.Name != "Ship & Save"
     ) {
       SubTotalNet = SubTotalNet + el.Amount;
-
+      //console.log(el)
       content2 = `  <td class="Ch"> <p class="cha">${el.Name}  </p> </td>
                     <td class="ChAmount align-end"> <p class="cha align-end"> ${addCommas(
                       Number(el.Amount).toFixed(2)
@@ -498,17 +500,21 @@ function onLoad() {
 
       Chargesdiv.innerHTML = content2;
       tbody1.append(Chargesdiv);
+    
     }
+    //  console.log(Chargesdiv);
   });
+  Chargesdiv = document.createElement("tr");
+  Chargesdiv.classList = "trCharge";
 
   SubTotalNet = SubTotalNet + TotalNet;
-
-  const content4 = `<td class="Ch"> <p class="chaSubtotal"> Subtotal </p> </td>
+  //for (i = 0; i < 1; i++) {
+  const content4 = `<td class="ChSubtotal"> <p class="TotaldeSubtotal"> Subtotal </p> </td>
   <td><p class="SubtotalN" > ${addCommas(
     Number(SubTotalNet).toFixed(2)
-  )} </p> </td> 
-  `;
-  Chargesdiv.innerHTML = `  ${content4} `;
+  )} </p> </td> <br>`;
+  
+  Chargesdiv.innerHTML = content4;
   tbody1.append(Chargesdiv);
 
   const h3t = document.createElement("h3");
